@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Polo Distribuidora · Links</title>
+<meta name="description" content="Bazar, cocina, organización y temporada. Venta por mayor y menor con envíos a todo el país.">
+<meta name="theme-color" content="#111111">
+<meta property="og:title" content="Polo Distribuidora">
+<meta property="og:description" content="Venta por mayor y menor. Comprá online o registrate como mayorista.">
+<meta property="og:image" content="https://nudge-digital-lab.github.io/polo-links/img/og.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root{ --negro:#111; --gris:#1c1c1c; --linea:#2c2c2c; --amarillo:#FFD400; --turquesa:#13B5B1; --texto:#f4f4f4; --suave:#a9a9a9; }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ -webkit-text-size-adjust:100%; }
+  body{ font-family:Montserrat, system-ui, sans-serif; background:var(--negro); color:var(--texto); min-height:100vh;
+        background-image:radial-gradient(circle at 50% -10%, #2b2b2b 0%, var(--negro) 55%); }
+  a{ color:inherit; text-decoration:none; }
+  .wrap{ max-width:460px; margin:0 auto; padding:40px 16px 32px; }
+
+  header{ text-align:center; }
+  .logo{ width:84px; height:84px; margin:0 auto 16px; border-radius:50%; background:var(--gris); border:1px solid var(--linea);
+         display:flex; align-items:center; justify-content:center; }
+  .logo img{ height:50px; }
+  h1{ font-family:"Playfair Display", serif; font-weight:700; font-size:26px; letter-spacing:.08em; text-transform:uppercase; }
+  .claim{ margin-top:6px; font-size:11px; font-weight:600; letter-spacing:.32em; text-transform:uppercase; color:var(--suave); }
+  .chips{ display:flex; justify-content:center; flex-wrap:wrap; gap:8px; margin-top:18px; }
+  .chip{ font-size:12px; font-weight:600; padding:6px 12px; border-radius:99px; border:1px solid var(--linea); color:#ddd; }
+  .chip b{ color:var(--amarillo); font-weight:700; }
+
+  .principal{ display:flex; align-items:center; justify-content:center; gap:10px; margin-top:28px; padding:17px 20px;
+              background:var(--amarillo); color:var(--negro); border-radius:14px; font-weight:800; font-size:16px;
+              text-transform:uppercase; letter-spacing:.03em; transition:transform .15s; }
+  .principal:active, .link:active, .boton:active{ transform:scale(.98); }
+  .principal svg{ width:20px; height:20px; }
+
+  .bloque{ margin-top:22px; }
+  .rotulo{ font-size:11px; font-weight:700; letter-spacing:.24em; text-transform:uppercase; color:var(--suave); margin:0 4px 10px; }
+
+  /* tarjeta mayorista */
+  .mayorista{ background:var(--gris); border:1px solid var(--linea); border-radius:18px; overflow:hidden; }
+  .may-top{ padding:20px 20px 16px; position:relative; }
+  .may-top .eti{ display:inline-block; font-size:11px; font-weight:700; letter-spacing:.16em; text-transform:uppercase;
+                 background:var(--turquesa); color:#fff; padding:4px 10px; border-radius:6px; }
+  .may-top h2{ font-size:28px; font-weight:800; text-transform:uppercase; letter-spacing:-.01em; color:var(--amarillo); margin-top:10px; line-height:1; }
+  .may-top p{ font-size:14px; line-height:1.5; color:#d6d6d6; margin-top:8px; }
+  .may-top p b{ color:#fff; }
+  .combos{ display:grid; grid-template-columns:1fr 1fr; gap:8px; padding:0 20px; }
+  .combo{ background:#fff; border-radius:12px; overflow:hidden; color:var(--negro); }
+  .combo img{ display:block; width:100%; aspect-ratio:1; object-fit:cover; }
+  .combo span{ display:block; padding:8px 10px; font-size:12px; font-weight:700; line-height:1.25; }
+  .botones{ display:grid; gap:8px; padding:16px 20px 20px; }
+  .boton{ display:flex; align-items:center; justify-content:center; gap:8px; padding:14px; border-radius:12px; font-weight:700; font-size:14px; transition:transform .15s; }
+  .boton svg{ width:18px; height:18px; flex:none; }
+  .b-am{ background:var(--amarillo); color:var(--negro); }
+  .b-wa{ background:transparent; border:1px solid #2f5e45; color:#7fe0a6; }
+
+  /* links simples */
+  .lista{ display:grid; gap:8px; }
+  .link{ display:flex; align-items:center; gap:14px; padding:12px 14px; background:var(--gris); border:1px solid var(--linea); border-radius:14px;
+         transition:transform .15s, border-color .15s; }
+  .link:hover{ border-color:#444; }
+  .link .ic{ width:40px; height:40px; border-radius:10px; flex:none; display:flex; align-items:center; justify-content:center; background:#262626; overflow:hidden; }
+  .link .ic img{ width:100%; height:100%; object-fit:cover; }
+  .link .ic svg{ width:20px; height:20px; color:var(--amarillo); }
+  .link .tx{ flex:1; min-width:0; }
+  .link .tx b{ display:block; font-size:15px; font-weight:700; }
+  .link .tx small{ display:block; font-size:12px; color:var(--suave); margin-top:2px; }
+  .link .fl{ width:16px; height:16px; color:#666; flex:none; }
+
+  .redes{ display:flex; justify-content:center; gap:12px; margin-top:26px; }
+  .redes a{ width:46px; height:46px; border-radius:50%; border:1px solid var(--linea); display:flex; align-items:center; justify-content:center; }
+  .redes svg{ width:20px; height:20px; }
+  footer{ text-align:center; margin-top:22px; font-size:12px; color:#777; line-height:1.6; }
+  footer a{ color:#999; }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute">
+  <symbol id="i-carro" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.6 12.2a2 2 0 0 0 2 1.6h8.2a2 2 0 0 0 2-1.5L22 7H6"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+  <symbol id="i-tag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8Z"/><circle cx="7.5" cy="7.5" r="1.5"/></symbol>
+  <symbol id="i-estrella" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9Z"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+  <symbol id="i-flecha" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-fb" viewBox="0 0 24 24" fill="currentColor"><path d="M14 8.5V6.8c0-.8.2-1.3 1.4-1.3H17V2.3c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2H7.6V12h2.7v9.8H14V12h2.8l.4-3.5H14Z"/></symbol>
+</svg>
+
+<div class="wrap">
+  <header>
+    <div class="logo"><img src="img/monograma-blanco.png" alt="Polo Distribuidora"></div>
+    <h1>Polo Distribuidora</h1>
+    <p class="claim">Venta por mayor y menor</p>
+    <div class="chips">
+      <span class="chip">Bazar · Cocina · Organización</span>
+      <span class="chip"><b>Envíos</b> a todo el país</span>
+    </div>
+  </header>
+
+  <a class="principal" href="https://www.polodistribuidora.com/?utm_source=instagram&amp;utm_medium=bio&amp;utm_campaign=links">
+    <svg><use href="#i-carro"/></svg> Comprar online
+  </a>
+
+  <section class="bloque">
+    <p class="rotulo">Para revendedores</p>
+    <div class="mayorista">
+      <div class="may-top">
+        <span class="eti">Venta mayorista</span>
+        <h2>¿Revendés?</h2>
+        <p>Registrate gratis y vas a ver los <b>precios por mayor</b> en toda la tienda. Compra mínima de <b>$200.000</b>.</p>
+      </div>
+      <div class="combos">
+        <a class="combo" href="https://www.polodistribuidora.com/productos/combo-vidrio-durax-original-84-piezas/?utm_source=instagram&amp;utm_medium=bio&amp;utm_campaign=links">
+          <img src="img/combo-durax.webp" alt="Combo Durax 84 piezas" loading="lazy"><span>Combo Durax<br>84 piezas</span></a>
+        <a class="combo" href="https://www.polodistribuidora.com/productos/combo-primavera-verano-2026/?utm_source=instagram&amp;utm_medium=bio&amp;utm_campaign=links">
+          <img src="img/combo-verano.webp" alt="Combo Primavera Verano 72 piezas" loading="lazy"><span>Combo Primavera<br>Verano 72 piezas</span></a>
+      </div>
+      <div class="botones">
+        <a class="boton b-am" href="https://www.polodistribuidora.com/account/register/wholesale/04e4333d-638b-41e0-aecb-8993fbe7b1c2?utm_source=instagram&amp;utm_medium=bio&amp;utm_campaign=links">
+          <svg><use href="#i-user"/></svg> Registrarme como mayorista</a>
+        <a class="boton b-wa" href="https://wa.me/5491166610164?text=Hola%20Polo%20Distribuidora%21%20Quiero%20consultar%20por%20compras%20mayoristas">
+          <svg><use href="#i-wa"/></svg> Consultar por WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloque">
+    <p class="rotulo">En la tienda</p>
+    <div class="lista">
+      <a class="link" href="https://www.polodistribuidora.com/ofertas/?utm_source=instagram&amp;utm_medium=bio&amp;utm_campaign=links">
+        <span class="ic"><svg><use href="#i-tag"/></svg></span>
+        <span class="tx"><b>Ofertas</b><small>Productos con descuento</small></span>
+        <svg class="fl"><use href="#i-flecha"/></svg></a>
+      <a class="link" href="https://www.polodistribuidora.com/combos/?utm_source=instagram&amp;utm_medium=bio&amp;utm_campaign=links">
+        <span class="ic"><img src="img/combo-durax.webp" alt="" loading="lazy"></span>
+        <span class="tx"><b>Combos</b><small>Mercadería en cantidad para tu negocio</small></span>
+        <svg class="fl"><use href="#i-flecha"/></svg></a>
+      <a class="link" href="https://www.polodistribuidora.com/cocina/?utm_source=instagram&amp;utm_medium=bio&amp;utm_campaign=links">
+        <span class="ic"><img src="img/sartenes.webp" alt="" loading="lazy"></span>
+        <span class="tx"><b>Cocina</b><small>Sartenes, cacerolas y utensilios</small></span>
+        <svg class="fl"><use href="#i-flecha"/></svg></a>
+      <a class="link" href="https://www.polodistribuidora.com/bazar/organizadores/?utm_source=instagram&amp;utm_medium=bio&amp;utm_campaign=links">
+        <span class="ic"><img src="img/organizadores.webp" alt="" loading="lazy"></span>
+        <span class="tx"><b>Organización</b><small>Canastos, cajas y organizadores</small></span>
+        <svg class="fl"><use href="#i-flecha"/></svg></a>
+      <a class="link" href="https://www.polodistribuidora.com/navidad/?utm_source=instagram&amp;utm_medium=bio&amp;utm_campaign=links">
+        <span class="ic"><svg><use href="#i-estrella"/></svg></span>
+        <span class="tx"><b>Navidad</b><small>Árboles, adornos y decoración</small></span>
+        <svg class="fl"><use href="#i-flecha"/></svg></a>
+      <a class="link" href="https://www.polodistribuidora.com/como-comprar/?utm_source=instagram&amp;utm_medium=bio&amp;utm_campaign=links">
+        <span class="ic"><svg><use href="#i-info"/></svg></span>
+        <span class="tx"><b>Cómo comprar</b><small>Paso a paso, pagos y envíos</small></span>
+        <svg class="fl"><use href="#i-flecha"/></svg></a>
+    </div>
+  </section>
+
+  <section class="bloque">
+    <p class="rotulo">Contacto</p>
+    <div class="lista">
+      <a class="link" href="https://wa.me/5491166610164?text=Hola%20Polo%20Distribuidora%21%20Quiero%20hacer%20una%20consulta">
+        <span class="ic" style="background:#16301f"><svg style="color:#4ade80"><use href="#i-wa"/></svg></span>
+        <span class="tx"><b>WhatsApp</b><small>11 6661-0164</small></span>
+        <svg class="fl"><use href="#i-flecha"/></svg></a>
+      <a class="link" href="mailto:ventas@polodistribuidora.com">
+        <span class="ic"><svg><use href="#i-mail"/></svg></span>
+        <span class="tx"><b>Mail</b><small>ventas@polodistribuidora.com</small></span>
+        <svg class="fl"><use href="#i-flecha"/></svg></a>
+    </div>
+  </section>
+
+  <nav class="redes" aria-label="Redes">
+    <a href="https://instagram.com/polodistribuidoraoficial" aria-label="Instagram"><svg><use href="#i-ig"/></svg></a>
+    <a href="https://www.facebook.com/profile.php?id=61588207614553" aria-label="Facebook"><svg><use href="#i-fb"/></svg></a>
+    <a href="https://www.polodistribuidora.com/?utm_source=instagram&amp;utm_medium=bio&amp;utm_campaign=links" aria-label="Tienda online"><svg><use href="#i-carro"/></svg></a>
+  </nav>
+
+  <footer>
+    <a href="https://www.polodistribuidora.com/?utm_source=instagram&amp;utm_medium=bio&amp;utm_campaign=links">polodistribuidora.com</a><br>
+    © Polo Distribuidora
+  </footer>
+</div>
+</body>
+</html>
